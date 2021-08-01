@@ -5,21 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/08/01 14:32:22 by fcaquard          #+#    #+#              #
-#    Updated: 2021/08/01 18:45:56 by fcaquard         ###   ########.fr        #
+#    Created: 2021/08/01 18:10:36 by fcaquard          #+#    #+#              #
+#    Updated: 2021/08/01 18:43:46 by fcaquard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+NAME = libft.a
+SRCS =				\
+	ft_atoi.c		\
+	ft_isspace.c	\
+	ft_putchar.c	\
+	ft_putnbr.c		\
+	ft_putstr.c		\
+	ft_strlen.c		
 
-LIBFT = libft.a
+OBJS = $(SRCS:.c=.o)
 
-$(LIBFT):
-	cd ./libft && $(MAKE)
+all : $(NAME)
 
-all: $(LIBFT)
-	$(CC) $(CFLAGS) client.c -o HEYEY
+$(NAME): $(OBJS)
+	ar rs $(NAME) $(OBJS)
 
 clean:
 	rm -f *.o

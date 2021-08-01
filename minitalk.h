@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.c                                         :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/01 15:00:53 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/01 15:07:05 by fcaquard         ###   ########.fr       */
+/*   Created: 2021/08/01 17:10:36 by fcaquard          #+#    #+#             */
+/*   Updated: 2021/08/01 18:39:58 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <signal.h>
+#ifndef MINITALK_H
+# define MINITALK_H
+# include "./libft/libft.a"
+// 2 exec files:
+// 'server' which launches first and returns its PID.
+// 'client' which takes 2 parameters. The server's PID and the string to be sent out.
+
+// gcc client.c -o client
+// gcc server.c -o server
+
+# include <signal.h>
 /**
  * signal
  * sigemptyset
@@ -18,12 +28,12 @@
  * sigaction
  * kill
  */
-#include <stdlib.h>
+# include <stdlib.h>
 /**
  * malloc
  * free
  */
-#include <unistd.h>
+# include <unistd.h>
 /**
  * write
  * getpid
@@ -33,7 +43,10 @@
  * exit
  */
 
-int main(void)
-{
-	return (0);
-}
+# include <sys/types.h>
+/**
+ *  t_pid support
+ */
+# include <stdio.h>
+# include <limits.h>
+#endif
