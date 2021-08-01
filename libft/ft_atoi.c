@@ -6,11 +6,11 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:32:29 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/01 18:06:12 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/01 23:02:33 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "./include/libft.h"
 
 int	ft_atoi(const char *str)
 {

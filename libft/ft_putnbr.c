@@ -6,11 +6,11 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 18:01:45 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/01 18:18:37 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/01 23:01:36 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "./include/libft.h"
 
 int	ft_putnbr(long long nb, int n)
 {

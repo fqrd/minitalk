@@ -6,13 +6,13 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:10:36 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/01 18:39:58 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/01 22:31:04 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINITALK_H
 # define MINITALK_H
-# include "./libft/libft.a"
+# include "./libft/include/libft.h"
 // 2 exec files:
 // 'server' which launches first and returns its PID.
 // 'client' which takes 2 parameters. The server's PID and the string to be sent out.
