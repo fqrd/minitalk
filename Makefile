@@ -6,7 +6,7 @@
 #    By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/01 14:32:22 by fcaquard          #+#    #+#              #
-#    Updated: 2021/08/01 23:46:26 by fcaquard         ###   ########.fr        #
+#    Updated: 2021/08/01 23:51:32 by fcaquard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,9 @@ $(CLIENT): $(OBJS)
 
 libs:
 	$(MAKE) -C ./libft
+
+lclean:
+	cd ./libft && rm -f ./*.o
 
 clean:
 	rm -f *.o
