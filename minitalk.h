@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:10:36 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/01 22:31:04 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/02 10:47:10 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 # include <signal.h>
 /**
  * signal
- * sigemptyset
- * sigaddset
+ * sigemptyset  (return 0 success; -1 error)
+ * sigaddset (return 0 success; -1 error)
  * sigaction
  * kill
  */
