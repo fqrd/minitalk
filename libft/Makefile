@@ -6,7 +6,7 @@
 #    By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/01 18:10:36 by fcaquard          #+#    #+#              #
-#    Updated: 2021/08/01 23:02:30 by fcaquard         ###   ########.fr        #
+#    Updated: 2021/08/02 17:56:03 by fcaquard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS =				\
 	ft_putchar.c	\
 	ft_putnbr.c		\
 	ft_putstr.c		\
+	ft_power.c		\
 	ft_strlen.c		
 
 OBJS = $(SRCS:.c=.o)

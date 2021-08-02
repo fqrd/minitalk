@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/01 18:05:46 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/02 17:53:17 by fcaquard         ###   ########.fr       */
+/*   Created: 2021/08/02 17:52:45 by fcaquard          #+#    #+#             */
+/*   Updated: 2021/08/02 17:53:05 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <limits.h>
-# include <stddef.h>
-# include <unistd.h>
+#include "include/libft.h"
 
-int		ft_atoi(const char *str);
-int		ft_isspace(int c);
-int		ft_putchar(unsigned char c);
-int		ft_putnbr(long long nb, int n);
-int		ft_putstr(char *s);
-size_t	ft_strlen(const char *str);
-int		ft_power(int nb, int power);
-
-#endif
+int	ft_power(int nb, int power)
+{
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	if (power > 1)
+		nb *= ft_power(nb, --power);
+	return (nb);
+}
