@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:16:52 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/02 12:02:55 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/02 14:42:22 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ int main(int argc, char *argv[])
 {
 	int		pid;
 	char	*str;
-	int		res;
-	sigset_t sigset;
+	int i;
+	// int		res;
+	// sigset_t sigset;
 
 	if (argc < 3)
 		return (0);
@@ -27,9 +28,16 @@ int main(int argc, char *argv[])
 
 	printf("pid: %d\n", pid);
 	printf("str: %s\n", str);
-	res = sigemptyset(&sigset);
-	printf("sigset: %d\n", res);
-
-	kill(pid, SIGKILL);
-
+	// res = sigemptyset(&sigset);
+	// printf("sigset: %d\n", res);
+	i = 0;
+	while (i < 800)
+	{
+		ft_putnbr(i, 0);
+		ft_putchar('\n');
+		kill(pid, SIGUSR1);
+		usleep(500);
+		i++;
+	}
+	return (0);
 }
