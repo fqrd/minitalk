@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:16:52 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/02 11:05:17 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/02 12:02:55 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,7 @@ int main(int argc, char *argv[])
 	printf("str: %s\n", str);
 	res = sigemptyset(&sigset);
 	printf("sigset: %d\n", res);
+
+	kill(pid, SIGKILL);
+
 }
