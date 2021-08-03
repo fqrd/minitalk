@@ -6,13 +6,13 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:16:52 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/02 20:03:36 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/03 11:59:40 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void	to_binary(int c, int bits, int pid)
+void	send(int c, int bits, int pid)
 {
 	int b;
 
@@ -23,7 +23,7 @@ void	to_binary(int c, int bits, int pid)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
-		usleep(5);
+		usleep(50);
 		bits--;
 	}
 }
@@ -38,6 +38,7 @@ int		main(int argc, char *argv[])
 	pid = ft_atoi(argv[1]);
 	str = argv[2];
 	while (*str)
-		to_binary(*str++, 7, pid);
+		send(*str++, 7, pid);
+	send(4, 7, pid);
 	return (0);
 }
