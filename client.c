@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:16:52 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/03 11:59:40 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/03 14:39:04 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	send(int c, int bits, int pid)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
-		usleep(50);
 		bits--;
+		usleep(0);
 	}
 }
 
