@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 15:00:53 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/03 19:31:27 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/03 19:42:01 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	handler(int sig, siginfo_t *info, void *ucontext)
 {
-	static int i = 7;
-	static int c = 0;
+	static int	i = 7;
+	static int	c = 0;
 
 	(void)ucontext;
 	c <<= 1;
@@ -30,7 +30,7 @@ void	handler(int sig, siginfo_t *info, void *ucontext)
 	kill(info->si_pid, SIGUSR1);
 }
 
-int		main(void)
+int	main(void)
 {
 	struct sigaction	sig;
 

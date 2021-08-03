@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:16:52 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/03 19:32:53 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/03 19:41:37 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	send(char *s, int pid)
 {
 	static int	c = 0;
 	static int	bit = -1;
-	static char *str = NULL;
+	static char	*str = NULL;
 
 	if (!str)
 		str = s;
@@ -27,7 +27,6 @@ void	send(char *s, int pid)
 			exit(0);
 		bit = 7;
 	}
-
 	if ((c >> bit--) & 1)
 		kill(pid, SIGUSR1);
 	else
@@ -37,16 +36,15 @@ void	send(char *s, int pid)
 void	acknowlegded(int sig, siginfo_t *info, void *ucontext)
 {
 	(void) ucontext;
-
 	if (sig == SIGUSR1)
 		send(NULL, info->si_pid);
 }
 
-int		main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	struct sigaction	ack;
-	int		pid;
-	char	*str;
+	int					pid;
+	char				*str;
 
 	if (argc < 3)
 		return (0);
