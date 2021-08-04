@@ -6,11 +6,11 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 15:00:53 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/04 15:52:04 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/04 16:32:56 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "../includes/minitalk.h"
 
 void	handler(int sig, siginfo_t *info, void *ucontext)
 {
@@ -34,7 +34,7 @@ int	main(void)
 {
 	struct sigaction	sig;
 
-	ft_putnbr(getpid(), 0);
+	ft_putnbr(getpid());
 	ft_putchar('\n');
 	sig.sa_flags = SA_SIGINFO;
 	sig.sa_sigaction = handler;

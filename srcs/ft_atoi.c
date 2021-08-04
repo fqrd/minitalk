@@ -6,11 +6,19 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:32:29 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/04 15:01:05 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/04 16:33:01 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "../includes/minitalk.h"
+
+static int	ft_isspace(int c)
+{
+	if (c == '\t' || c == '\n' || c == '\v'
+		|| c == '\f' || c == '\r' || c == ' ')
+		return (1);
+	return (0);
+}
 
 static long long	prevent_overflow(char c, long long *nbr)
 {

@@ -6,11 +6,11 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:16:52 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/04 15:52:35 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/04 16:33:03 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "../includes/minitalk.h"
 
 void	send(char *s, int id)
 {

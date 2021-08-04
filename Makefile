@@ -6,38 +6,40 @@
 #    By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/01 14:32:22 by fcaquard          #+#    #+#              #
-#    Updated: 2021/08/01 23:51:32 by fcaquard         ###   ########.fr        #
+#    Updated: 2021/08/04 16:34:35 by fcaquard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+SRC_FOLDER = ./srcs/
 
-SRCS =				\
-	client.c		\
-	server.c
+SERVER_SRCS = 					\
+	$(SRC_FOLDER)server.c		\
+	$(SRC_FOLDER)ft_atoi.c		\
+	$(SRC_FOLDER)minitalk_utils.c
+
+CLIENT_SRCS =					\
+	$(SRC_FOLDER)client.c		\
+	$(SRC_FOLDER)ft_atoi.c		\
+	$(SRC_FOLDER)minitalk_utils.c
 	
-OBJS = $(SRCS:.c=.o)
+SERVER_OBJS = $(SERVER_SRCS:.c=.o)
+CLIENT_OBJS = $(CLIENT_SRCS:.c=.o)
 
 SERVER = server
 CLIENT = client
 
-all: libs $(SERVER) $(CLIENT)
+all: $(SERVER) $(CLIENT)
 
-$(SERVER): $(OBJS)
-	$(CC) $(CFLAGS) -o $(SERVER) $(SERVER).o -L libft -lft
+$(SERVER): $(SERVER_OBJS)
+	$(CC) $(CFLAGS) -o $(SERVER) $(SERVER_OBJS)
 
-$(CLIENT): $(OBJS)
-	$(CC) $(CFLAGS) -o $(CLIENT) $(CLIENT).o -L libft -lft
-
-libs:
-	$(MAKE) -C ./libft
-
-lclean:
-	cd ./libft && rm -f ./*.o
+$(CLIENT): $(CLIENT_OBJS)
+	$(CC) $(CFLAGS) -o $(CLIENT) $(CLIENT_OBJS)
 
 clean:
-	rm -f *.o
+	rm -f $(SRC_FOLDER)*.o
 
 fclean: clean
 	rm -f ./server ./client
