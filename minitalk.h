@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:10:36 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/03 19:40:25 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/04 14:05:07 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@
 # include <signal.h>
 # include <unistd.h>
 # include <sys/types.h>
+# include <stdlib.h>
 #endif
